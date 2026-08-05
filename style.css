@@ -22,19 +22,24 @@ body {
   flex-direction: column;
 }
 .output {
+  min-height: 100px;
   width: 100%;
   border: 2px solid #2b2727;
-  height: 100px;
   padding: 0 12px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-around;
+  flex-wrap: wrap;
   columns: #3a4149;
   font-size: 18px;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: normal;
 }
 .output .current-output {
   font-size: 35px;
+  display: flex;
 }
 
 .buttons {
@@ -60,7 +65,26 @@ body {
   outline: none;
   border: none;
   border-radius: 2px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+button:focus {
+  outline: none;
+  transform: translateY(1px);
+}
+button:active,
+button.pressed {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
 .buttons .equal-btn,
 .buttons .clear-btn {
   min-width: 206px;
