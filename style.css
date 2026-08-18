@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
 }
 .calc {
-  max-width: 420px;
+  max-width: 300px;
   background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
@@ -44,9 +44,8 @@ body {
 
 .buttons {
   border: 1px solid #e9dddd;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
   justify-content: space-between;
   align-items: center;
@@ -57,8 +56,7 @@ body {
   align-items: center;
   line-height: 0;
   font-size: 30px;
-  min-width: 100px;
-  min-height: 70px;
+  min-height: 60px;
   padding: 15px;
   background-color: #fff;
   color: #3a4149;
@@ -87,7 +85,7 @@ button.pressed {
 
 .buttons .equal-btn,
 .buttons .clear-btn {
-  min-width: 206px;
+  grid-column: span 2;
 }
 
 .buttons .equal-btn {
