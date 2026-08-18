@@ -24,7 +24,8 @@ body {
 .output {
   min-height: 100px;
   width: 100%;
-  border: 2px solid #2b2727;
+  border: 2px solid #c5c1c1;
+  border-bottom: none;
   padding: 0 12px;
   display: flex;
   flex-direction: column;
@@ -41,12 +42,15 @@ body {
   font-size: 35px;
   display: flex;
 }
+.output:focus {
+  border: 2px solid #3f454c;
+}
 
 .buttons {
-  border: 1px solid #e9dddd;
+  border: 1px solid #c5c1c1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
+  gap: 2px;
   justify-content: space-between;
   align-items: center;
 }
