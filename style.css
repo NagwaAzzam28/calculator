@@ -77,10 +77,11 @@ button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-button:focus {
+/* button:focus {
   outline: none;
   transform: translateY(1px);
-}
+} */
+
 button:active,
 button.pressed {
   transform: translateY(1px);
